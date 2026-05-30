@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Split Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="f02" style="width:100vw;height:100vh;display:flex;flex-direction:column;overflow:hidden">
+  <div class="top-panel"><div class="plabel">DASHBOARD POV</div><div style="width:60px;height:36px;background:#C8C8CC;border-radius:6px;opacity:.6;margin:8px 0"></div><div class="pbig">MISSED EXIT</div></div>
+  <div class="divider"></div>
+  <div class="bot-panel"><div class="plabel">PHONE SCREEN</div><div class="phone-mock"></div><div class="pill">0:38 reel</div></div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.top-panel{flex:1;background:#F2F2F7;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transform:translateY(-100%);transition:transform .5s cubic-bezier(.34,1.2,.64,1)}
+.bot-panel{flex:1;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transform:translateY(100%);transition:transform .5s .06s cubic-bezier(.34,1.2,.64,1)}
+.divider{height:4px;background:#FF6B00;transform:scaleX(0);transform-origin:left;transition:transform .4s .4s ease;flex-shrink:0}
+.plabel{font-family:'DM Mono',monospace;font-size:3vw;color:#8A8A8E;letter-spacing:.12em;text-transform:uppercase}
+.pbig{font-size:10vw;color:#0A0A0A;letter-spacing:.03em}
+.phone-mock{width:36px;height:60px;border:2px solid #0A0A0A;border-radius:8px;background:linear-gradient(160deg,#E8E8E8,#D0D0D0)}
+.pill{background:#FF6B00;color:white;font-family:'DM Mono',monospace;font-size:3vw;padding:4px 14px;border-radius:20px;opacity:0;transform:scale(0);transition:transform .4s .7s cubic-bezier(.34,1.4,.64,1),opacity .3s .7s ease}
+.go .top-panel,.go .bot-panel{transform:translateY(0)}
+.go .divider{transform:scaleX(1)}
+.go .pill{opacity:1;transform:scale(1)}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.getElementById('f02').classList.add('go'),100)}</script>
+
+</body>
+</html>

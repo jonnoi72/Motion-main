@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — CTA Slam</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;gap:2vw;position:relative">
+  <div class="glow"></div>
+  <div class="cta-pre">Type in Comments</div>
+  <div class="yes">YES</div>
+  <div class="right-now">RIGHT NOW.</div>
+  <div class="cta-pill">Comment · Hold · Export</div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(255,107,0,.1) 0%,transparent 70%);opacity:0;transition:opacity .5s .3s ease}
+.cta-pre{font-family:'DM Mono',monospace;font-size:3vw;color:#8A8A8E;letter-spacing:.15em;text-transform:uppercase;transform:translateX(-30vw);opacity:0;transition:transform .4s cubic-bezier(.34,1.2,.64,1),opacity .3s ease}
+.yes{font-size:45vw;color:#FF6B00;line-height:.85;letter-spacing:.01em;transform:scale(.2);opacity:0;transition:transform .45s .12s cubic-bezier(.34,1.35,.64,1),opacity .3s .12s ease}
+.right-now{font-size:13vw;color:#0A0A0A;letter-spacing:.06em;transform:translateY(8vw);opacity:0;transition:transform .4s .28s cubic-bezier(.34,1.2,.64,1),opacity .3s .28s ease}
+.cta-pill{background:#0A0A0A;color:white;font-family:'DM Sans',sans-serif;font-size:3vw;font-weight:600;padding:2vw 5vw;border-radius:10vw;letter-spacing:.03em;opacity:0;transform:translateY(3vw);transition:opacity .4s .5s ease,transform .4s .5s ease}
+.go .glow{opacity:1}
+.go .cta-pre{transform:translateX(0);opacity:1}
+.go .yes{transform:scale(1);opacity:1}
+.go .right-now{transform:translateY(0);opacity:1}
+.go .cta-pill{opacity:1;transform:translateY(0)}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.body.classList.add('go'),100)}</script>
+
+</body>
+</html>

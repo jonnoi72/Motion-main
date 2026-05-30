@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;gap:6vw">
+  <div class="tl-head">The Script Decided</div>
+  <div class="tl">
+    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-txt">First sentence</div><div class="tl-sub">Hook fires</div></div></div>
+    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div><div><div class="tl-txt">Reason to stay</div><div class="tl-sub">Loop opens</div></div></div>
+    <div class="tl-item"><div class="tl-dot-col"><div class="tl-dot"></div></div><div><div class="tl-txt">Brain objects</div><div class="tl-sub">Too late.</div></div></div>
+  </div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'DM Sans',sans-serif}
+.tl-head{font-family:'DM Mono',monospace;font-size:3vw;color:#8A8A8E;letter-spacing:.12em;text-transform:uppercase;text-align:center;opacity:0;transition:opacity .4s ease}
+.tl{display:flex;flex-direction:column;gap:0;width:70vw}
+.tl-item{display:flex;align-items:flex-start;gap:4vw;padding-bottom:5vw}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot-col{display:flex;flex-direction:column;align-items:center;flex-shrink:0;margin-top:3px}
+.tl-dot{width:3vw;height:3vw;background:#FF6B00;border-radius:50%;transform:scale(0);transition:transform .35s cubic-bezier(.34,1.5,.64,1)}
+.tl-line{width:2px;height:5vw;background:#E5E5EA;margin-top:4px;transform:scaleY(0);transform-origin:top;transition:transform .3s ease}
+.tl-txt{font-size:5vw;font-weight:600;color:#0A0A0A;opacity:0;transform:translateX(10px);transition:opacity .3s ease,transform .3s ease}
+.tl-sub{font-family:'DM Mono',monospace;font-size:3vw;color:#8A8A8E;opacity:0;transition:opacity .3s ease}
+.go .tl-head{opacity:1}
+.go .tl-item:nth-child(1) .tl-dot{transform:scale(1);transition-delay:.15s}
+.go .tl-item:nth-child(1) .tl-line{transform:scaleY(1);transition-delay:.35s}
+.go .tl-item:nth-child(1) .tl-txt{opacity:1;transform:translateX(0);transition-delay:.2s}
+.go .tl-item:nth-child(1) .tl-sub{opacity:1;transition-delay:.25s}
+.go .tl-item:nth-child(2) .tl-dot{transform:scale(1);transition-delay:.5s}
+.go .tl-item:nth-child(2) .tl-line{transform:scaleY(1);transition-delay:.7s}
+.go .tl-item:nth-child(2) .tl-txt{opacity:1;transform:translateX(0);transition-delay:.55s}
+.go .tl-item:nth-child(2) .tl-sub{opacity:1;transition-delay:.6s}
+.go .tl-item:nth-child(3) .tl-dot{transform:scale(1);transition-delay:.85s}
+.go .tl-item:nth-child(3) .tl-txt{opacity:1;transform:translateX(0);transition-delay:.9s}
+.go .tl-item:nth-child(3) .tl-sub{opacity:1;transition-delay:.95s}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.body.classList.add('go'),100)}</script>
+
+</body>
+</html>

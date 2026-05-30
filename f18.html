@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — BRoll Label</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#E8E8ED;gap:6vw">
+  <div style="position:relative">
+    <div class="broll-box"><div style="font-size:12vw;opacity:.3">🎥</div></div>
+    <div class="trk-label"><div class="trk-dot"></div>YOUR BRAND</div>
+    <span class="c c-tl"></span><span class="c c-tr"></span><span class="c c-bl"></span><span class="c c-br"></span>
+  </div>
+  <div class="b-caption">YOUR<br>CONTENT.</div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.broll-box{width:50vw;height:50vw;background:linear-gradient(145deg,#D0D0D8,#B8B8C0);border-radius:5vw;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 36px rgba(0,0,0,.12)}
+.trk-label{position:absolute;bottom:-3vw;right:-11vw;background:#FF6B00;color:white;font-family:'DM Mono',monospace;font-size:3.5vw;font-weight:500;padding:2vw 4vw;border-radius:10vw;white-space:nowrap;display:flex;align-items:center;gap:2vw;box-shadow:0 6px 16px rgba(255,107,0,.4);transform:translateX(20vw);opacity:0;transition:transform .4s .5s cubic-bezier(.34,1.3,.64,1),opacity .3s .5s ease}
+.trk-dot{width:2vw;height:2vw;background:white;border-radius:50%}
+.c{position:absolute;width:4vw;height:4vw;border-color:#FF6B00;border-style:solid;opacity:0;transition:opacity .3s .7s ease}
+.c-tl{top:-1vw;left:-1vw;border-width:2px 0 0 2px}
+.c-tr{top:-1vw;right:-1vw;border-width:2px 2px 0 0}
+.c-bl{bottom:-1vw;left:-1vw;border-width:0 0 2px 2px}
+.c-br{bottom:-1vw;right:-1vw;border-width:0 2px 2px 0}
+.b-caption{font-size:14vw;color:#0A0A0A;text-align:center;letter-spacing:.02em;opacity:0;transform:translateY(4vw);transition:opacity .4s .85s ease,transform .4s .85s ease}
+.go .trk-label{transform:translateX(0);opacity:1}
+.go .c{opacity:1}
+.go .b-caption{opacity:1;transform:translateY(0)}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.body.classList.add('go'),100)}</script>
+
+</body>
+</html>

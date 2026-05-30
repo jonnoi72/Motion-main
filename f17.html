@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Kinetic Finale</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;gap:2vw;position:relative">
+  <div class="flash" id="flash"></div>
+  <div class="sm-grey">You did not choose to read this far.</div>
+  <div class="big-struct">THE STRUCTURE</div>
+  <div class="chose">CHOSE</div>
+  <div class="for-you">FOR YOU.</div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.flash{position:absolute;inset:0;background:#FF6B00;opacity:0;pointer-events:none}
+.sm-grey{font-family:'DM Sans',sans-serif;font-size:4vw;font-weight:300;color:#8A8A8E;text-align:center;opacity:0;transform:translateY(14px);transition:opacity .35s ease,transform .35s ease}
+.big-struct{font-size:14vw;color:#0A0A0A;text-align:center;letter-spacing:.02em;line-height:.9;transform:translateY(-40px) scale(.6);opacity:0;transition:transform .35s .2s cubic-bezier(.34,1.3,.64,1),opacity .25s .2s ease}
+.chose{font-size:28vw;color:#FF6B00;text-align:center;letter-spacing:.01em;line-height:.85;transform:scale(.2);opacity:0;transition:transform .4s .35s cubic-bezier(.34,1.4,.64,1),opacity .25s .35s ease}
+.for-you{font-size:14vw;color:#0A0A0A;text-align:center;letter-spacing:.02em;line-height:.9;transform:translateY(30px);opacity:0;transition:transform .35s .55s cubic-bezier(.34,1.2,.64,1),opacity .3s .55s ease}
+.go .sm-grey{opacity:1;transform:translateY(0)}
+.go .big-struct{transform:translateY(0) scale(1);opacity:1}
+.go .chose{transform:scale(1);opacity:1}
+.go .for-you{transform:translateY(0);opacity:1}
+</style>
+<script>
+window.onload=()=>{
+  setTimeout(()=>document.body.classList.add('go'),100);
+  setTimeout(()=>{const f=document.getElementById('flash');f.style.transition='opacity .08s ease';f.style.opacity='0.35';setTimeout(()=>f.style.opacity='0',100);},900);
+}
+</script>
+
+</body>
+</html>

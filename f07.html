@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Split Kinetic</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;flex-direction:row;overflow:hidden">
+  <div class="left"><div class="stag">FEELS LIKE</div><div class="stxt">A CHOICE</div></div>
+  <div class="right"><div class="stag">REALITY</div><div class="stxt">IT IS NOT.</div></div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.left{width:50%;height:100vh;background:#F2F2F7;border-right:4px solid #FF6B00;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:4vw;transform:translateX(-100%);transition:transform .5s cubic-bezier(.34,1.2,.64,1)}
+.right{width:50%;height:100vh;background:#FF6B00;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:4vw;transform:translateX(100%);transition:transform .5s .06s cubic-bezier(.34,1.2,.64,1)}
+.stag{font-family:'DM Mono',monospace;font-size:3vw;color:#8A8A8E;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .3s .5s ease}
+.right .stag{color:rgba(255,255,255,.7)}
+.stxt{font-size:11vw;color:#0A0A0A;text-align:center;letter-spacing:.02em;line-height:.95;opacity:0;transition:opacity .3s .5s ease}
+.right .stxt{color:white;font-size:12vw}
+.go .left,.go .right{transform:translateX(0)}
+.go .stag,.go .stxt{opacity:1}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.body.classList.add('go'),100)}</script>
+
+</body>
+</html>

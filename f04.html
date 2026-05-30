@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Word by Word</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="f04" style="width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#fff">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:2px">
+    <div class="ww">WHY</div>
+    <div class="ww">CAN</div>
+    <div class="ww">I</div>
+    <div class="ww">NOT</div>
+    <div class="ww accent">STOP</div>
+    <div class="ww faded">WATCHING</div>
+    <div class="ww faded">THIS</div>
+  </div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.ww{font-size:16vw;color:#0A0A0A;line-height:.88;letter-spacing:.02em;text-align:center;opacity:0;transform:translateY(30px);transition:opacity .25s ease,transform .3s cubic-bezier(.34,1.2,.64,1)}
+.ww.accent{font-size:22vw;color:#FF6B00}
+.ww.faded{color:#C8C8CC}
+.go .ww:nth-child(1){opacity:1;transform:translateY(0);transition-delay:.0s}
+.go .ww:nth-child(2){opacity:1;transform:translateY(0);transition-delay:.12s}
+.go .ww:nth-child(3){opacity:1;transform:translateY(0);transition-delay:.22s}
+.go .ww:nth-child(4){opacity:1;transform:translateY(0);transition-delay:.32s}
+.go .ww:nth-child(5){opacity:1;transform:translateY(0);transition-delay:.44s}
+.go .ww:nth-child(6){opacity:1;transform:translateY(0);transition-delay:.64s}
+.go .ww:nth-child(7){opacity:1;transform:translateY(0);transition-delay:.80s}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.body.classList.add('go'),100)}</script>
+
+</body>
+</html>

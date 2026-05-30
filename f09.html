@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Stat Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;background:#F2F2F7">
+  <div class="card">
+    <div class="ctag">Daily Average Loss</div>
+    <div><span class="cnum" id="num">0</span><span class="cunit"> HRS</span></div>
+    <div class="cdesc">Content you never<br>intended to watch.</div>
+  </div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.card{background:#fff;border-radius:6vw;padding:8vw 9vw;width:80vw;box-shadow:0 16px 48px rgba(0,0,0,.1);border-left:6px solid #FF6B00;display:flex;flex-direction:column;gap:2vw;transform:translateY(30vw);opacity:0;transition:transform .5s cubic-bezier(.34,1.2,.64,1),opacity .3s ease}
+.ctag{font-family:'DM Mono',monospace;font-size:3vw;color:#FF6B00;letter-spacing:.12em;text-transform:uppercase}
+.cnum{font-size:30vw;color:#0A0A0A;line-height:.85;letter-spacing:.01em}
+.cunit{font-size:10vw;color:#8A8A8E;letter-spacing:.04em}
+.cdesc{font-family:'DM Sans',sans-serif;font-size:4vw;color:#8A8A8E;line-height:1.4;opacity:0;transition:opacity .4s .7s ease}
+.go .card{transform:translateY(0);opacity:1}
+.go .cdesc{opacity:1}
+</style>
+<script>
+window.onload=()=>{
+  setTimeout(()=>document.body.classList.add('go'),100);
+  let t=0;const iv=setInterval(()=>{
+    t+=80;const p=Math.min(1,t/1800);
+    const v=p<0.96?Math.round(p*25)/10:2.5;
+    document.getElementById('num').textContent=v>=2.4?'2–3':v.toFixed(1);
+    if(t>1900)clearInterval(iv);
+  },80);
+}
+</script>
+
+</body>
+</html>

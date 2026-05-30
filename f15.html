@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Rewind Flash</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;gap:4vw;position:relative">
+  <div class="border-pulse"></div>
+  <div class="grid">
+    <div class="rc"><div class="rt">A MAN SAT IN TRAFFIC</div></div>
+    <div class="rc"><div class="rt">THAT FEELING HAS A NAME</div></div>
+    <div class="rc"><div class="rt">IT IS NOT.</div></div>
+    <div class="rc"><div class="rt">A BLUEPRINT</div></div>
+  </div>
+  <div class="reveal">YOU'VE BEEN INSIDE ONE <span style="color:#FF6B00">THIS ENTIRE TIME.</span></div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.border-pulse{position:absolute;inset:10px;border:3px solid #FF6B00;border-radius:8vw;opacity:0;transition:opacity .3s ease}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:3vw;padding:0 6vw;opacity:0;transition:opacity .4s ease}
+.rc{background:#F2F2F7;border-radius:4vw;padding:3vw;display:flex;align-items:center;justify-content:center;min-height:20vw;opacity:.5}
+.rt{font-size:4vw;color:#0A0A0A;text-align:center;line-height:1.1;letter-spacing:.02em}
+.reveal{font-size:9vw;color:#0A0A0A;text-align:center;letter-spacing:.02em;line-height:1;padding:0 6vw;opacity:0;transform:translateY(30px);transition:opacity .5s .5s ease,transform .5s .5s cubic-bezier(.34,1.2,.64,1)}
+.go .border-pulse{opacity:.5}
+.go .grid{opacity:1}
+.go .reveal{opacity:1;transform:translateY(0)}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.body.classList.add('go'),100)}</script>
+
+</body>
+</html>

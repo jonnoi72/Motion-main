@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Pause Beat</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;gap:20px">
+  <div class="ptext">That feeling<br><strong>has a name.</strong></div>
+  <div class="pdot"></div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'DM Sans',sans-serif}
+.ptext{font-size:7vw;font-weight:300;color:#0A0A0A;text-align:center;line-height:1.4;padding:0 10vw;opacity:0;transition:opacity .8s ease}
+.ptext strong{font-weight:700}
+.pdot{width:10px;height:10px;background:#FF6B00;border-radius:50%;opacity:0;transform:scale(0);transition:opacity .4s .6s ease,transform .4s .6s cubic-bezier(.34,1.5,.64,1)}
+.go .ptext{opacity:1}
+.go .pdot{opacity:1;transform:scale(1)}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.body.classList.add('go'),100)}</script>
+
+</body>
+</html>

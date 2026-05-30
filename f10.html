@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blueprint — Contrast Swap</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;gap:4vw">
+  <div class="strike-wrap"><div class="strike-txt">WEAK WILLPOWER</div><div class="strike-line"></div></div>
+  <div class="divv"></div>
+  <div class="replace">A BLUEPRINT.</div>
+</div>
+<style>
+body{margin:0;overflow:hidden;font-family:'Bebas Neue',sans-serif}
+.strike-wrap{position:relative;text-align:center;opacity:0;transition:opacity .3s ease}
+.strike-txt{font-size:12vw;color:#C8C8CC;letter-spacing:.02em;line-height:1}
+.strike-line{position:absolute;top:50%;left:0;right:0;height:4px;background:#8A8A8E;border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .4s .45s ease}
+.divv{width:40px;height:2px;background:#E5E5EA;border-radius:1px;opacity:0;transition:opacity .3s .55s ease}
+.replace{font-size:17vw;color:#FF6B00;letter-spacing:.02em;text-align:center;transform:translateY(40px);opacity:0;transition:transform .4s .65s cubic-bezier(.34,1.2,.64,1),opacity .3s .65s ease}
+.go .strike-wrap{opacity:1}
+.go .strike-line{transform:scaleX(1)}
+.go .divv{opacity:1}
+.go .replace{transform:translateY(0);opacity:1}
+</style>
+<script>window.onload=()=>{setTimeout(()=>document.body.classList.add('go'),100)}</script>
+
+</body>
+</html>
